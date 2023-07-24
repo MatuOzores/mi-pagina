@@ -1,0 +1,756 @@
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+
+@font-face { 
+    font-family: 'seven';
+    src: url('Raleway-VariableFont_wght.ttf') format('opentype'),
+         url('Raleway-VariableFont_wght.woff2') format('woff2'),
+         url('Raleway-VariableFont_wght.woff') format('woff');
+}
+
+header{
+    width: auto;
+    height: auto;
+    position: fixed;
+    z-index: 50;
+
+}
+
+nav{
+    width: 100%;
+    height: 8vh;
+    background-color: #2c2e2f;
+    position: fixed;
+
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+nav li{
+    display: inline-block;
+    margin-right: 5vw;
+}
+
+nav li a{
+    position: relative;
+    color: #d1d1d1;
+    font-size: 2vh;
+    font-family: 'seven', Arial, Helvetica, sans-serif;
+    letter-spacing: 0.18vw;
+    padding: 0 0.58vw;
+    transition: 0.5s;
+}
+
+#principal:target, #secundario:target, #terciario:target{
+    color: #9c0000;
+    
+}
+
+#principal:target::after, #secundario:target::after, #terciario:target::after{
+    width: 100%;
+}
+
+
+
+nav li a:after{
+    content: "";
+    position: absolute;
+    background-color: #9c0000;
+    height: 0.27vh;
+    width: 0;
+    left: 0;
+    bottom: -1.6vh;
+    transition: 0.5s;
+}
+
+nav li a:hover{
+    color: #9c0000;
+}
+
+nav li a:hover::after{
+    width: 100%;
+}
+
+header nav h3{
+    display: inline-block;
+    font-family: 'seven', Arial, Helvetica, sans-serif;
+    color: #d1d1d1;
+}
+
+.apellido{
+    color: #9c0000;
+    margin-right: 5vw;
+}
+
+.logo{
+    display: inline-block;
+    position: absolute;
+    color: #d1d1d1;
+    font-family: 'seven', Arial, Helvetica, sans-serif;
+    font-size: 2vh;
+    letter-spacing: 0.45vh;
+    top: 35%;
+    left: 2.3%;
+    transition: .5s;
+    width: auto;
+}
+
+.logo:hover{
+    transition: .5s;
+    transform: scale(1.05);
+    
+}
+
+
+/* SECCION 1 */
+
+.inicio{
+    width: 100%;
+    height: 92vh;
+    background-color: #1b1b1b;
+
+}
+
+.container{
+    width: 50%;
+    height: 80vh;
+    background-color: transparent;
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%, 8vh);
+}
+
+.container h1{
+    font-size: 3vw;
+    font-family: 'seven', Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    text-align: center;
+}
+
+@keyframes typingAnimation {
+    0% {
+      width: 0;
+    }
+
+    90% {
+      width: 19%;
+    }
+
+    95%{
+      width: 19%;
+    }
+
+    100%{
+      width: 19%;
+    }
+}
+.container h2{
+    position: relative;
+    font-size: 1vw;
+    font-family: 'seven', Arial, Helvetica, sans-serif;
+    left: 15%;
+    color: #d1d1d1;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #9c0000;
+    animation: typingAnimation 4s steps(40) infinite alternate;
+    display: inline-block;
+}
+
+.container p{
+    position: relative;
+    font-size: 1vw;
+    font-family: 'seven', Arial, Helvetica, sans-serif;
+    left: 15%;
+    color: #d1d1d1; 
+    margin-top: 18vh;   
+}
+
+.links{
+    position: absolute;
+    color: #9c0000;
+    background-color: white;
+    font-family: 'seven', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    padding: 1vw;
+    border-radius: 2vw;
+    transform: translate(-50%, 0);
+    font-size: 2.6vh;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.3);
+    transition: .8s;
+}
+
+.links:hover{
+    transition: .8s;
+    color: white;
+    background-color: #9c0000;
+}
+
+#descargar{
+    top: 65%;
+    left: 40%;
+}
+
+#contactar{
+    top: 65%;
+    left: 60%;
+}
+
+#flecha{
+    position: absolute;
+    top: 92%;
+    left: 50%;
+    color: #9c0000;
+    font-size: 2.5vw;
+    transition: .5s;
+}
+
+#flecha:hover{
+    transition: .5s;
+    transform: scale(1.5);
+    color: white;
+}
+
+/* EXTRA DEL APARTADO SECCION (ICONOS DE ATRAS)*/
+
+#graduado {
+    position: absolute;
+    display: inline-block;
+    color: #9c0000;
+    top: 33.5%;
+    opacity: 1;
+    left: 29%;
+    font-size: 2.8vw;
+    max-width: 100px; 
+}
+
+
+/* APARTADO SECUNDARIO */
+
+.secundario{
+    width: 100%;
+    height: 100vh;
+    background-color: #1b1b1b;
+}
+
+.secundario h2{
+    font-size: 1.5vw;
+    font-family: 'seven', Arial, Helvetica, sans-serif;
+    position: absolute;
+    left: 50%;
+    top: 110vh;
+    color: white;
+    border-bottom: 2px solid #9c0000;
+    transform: translate(-40%, 0);
+}
+
+.container2{
+    width: 50vw;
+    height: 50vh;
+    background-color: transparent;
+    position: absolute;
+    left: 50%;
+    top: 125vh;
+    transform: translate(-50%, 0);
+}
+
+.izquierda{
+    width: 20vw;
+    height: 50vh;
+    background-color: transparent;
+    position: absolute;
+    display: inline-block;
+}
+
+.derecha{
+    width: 30vw;
+    height: 50vh;
+    background-color: transparent;
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 20vw;
+    border-left: 1px solid #808080;
+    box-shadow: 0px 0px 1px 1px #1b1b1b;
+}
+
+#instagram, #youtube, #linkedin{
+    color: #9c0000;
+    font-size: 2.5vw;
+    display: block;
+    position: absolute;
+    background-color: white;
+    padding: .45vw;
+    border-radius: 100px;
+    transition: .4s;
+}
+
+#instagram{
+    left: 70%;
+    top: 10%;
+    transform: translate(-70%, 0);
+}
+
+#youtube{
+    left: 70%;
+    top: 40%;
+    transform: translate(-70%, 0);  
+}
+
+#linkedin{
+    left: 70%;
+    top: 70%;
+    transform: translate(-70%, 0);  
+}
+
+#instagram:hover, #youtube:hover, #linkedin:hover{
+    background-color: #9c0000;
+    color: white;
+    transition: .4s;
+}
+
+.derecha h3{
+    font-family: 'seven', Arial, Helvetica, sans-serif;
+    font-size: 1.25vw;
+    letter-spacing: 0.08vw;
+    color: #e7e7e7;
+    padding: 2vw;
+    line-height: 3.9vh
+}
+
+#flecha2{
+    position: absolute;
+    top: 185%;
+    left: 50%;
+    color: #9c0000;
+    font-size: 2.5vw;
+    transition: .5s;
+}
+
+#flecha2:hover{
+    transition: .5s;
+    transform: scale(1.5);
+    color: white;
+}
+
+/* ACA EMPIEZA EL APARTADO TERCIARIO*/
+
+.terciario{
+    width: 100%;
+    height: 100vh;
+    background-color: #1b1b1b;
+}
+
+.terciario h2{
+    font-size: 1.5vw;
+    font-family: 'seven', Arial, Helvetica, sans-serif;
+    position: absolute;
+    left: 50%;
+    top: 205vh;
+    color: white;
+    border-bottom: 2px solid #9c0000;
+    transform: translate(-40%, 0);
+}
+
+.container3{
+    width: 70vw;
+    height: 70vh;
+    background-color: transparent;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 210vh;
+}
+
+.parte-de-arriba, .parte-de-abajo{
+    width:70vw;
+    height: 35vh;
+    position: absolute;
+}
+
+.parte-de-arriba{
+    background-color: transparent;
+}
+
+
+.parte-de-abajo{
+    background-color: transparent;
+    top: 50%;
+}
+
+
+
+.caja-1{
+    margin-left: 1vw;
+}
+
+.caja-2{
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.caja-3{
+    margin-right: 1vw;
+}
+
+.caja-1, .caja-2, .caja-3{
+    width: 19vw;
+    height: 30vh;
+    background-color: transparent;
+    margin-top: 3vh;
+    display: inline-block;
+    position: relative;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+
+}
+
+.imagen{
+    width: 19vw;
+    height: 20.5vh;
+    background-color: white;
+    display: block;
+    border-top-right-radius: 3vh;
+    border-top-left-radius: 3vh;
+}
+
+.datos{
+    width: 19vw;
+    height: 9.5vh;
+    background-color: #ffffff;
+    display: block;
+}
+
+.datos h4{
+    text-align: center;
+    display: block;
+    padding-top: 1.5vh;
+    padding-bottom: 1.8vh;
+    font-family: 'seven', Arial, Helvetica, sans-serif;
+    font-size: 1.8vh
+}
+
+#git, #world{
+    color: #9c0000;
+    font-size: 2.1vh;
+}
+
+#git{
+    margin-left: 7.5vw;
+}
+
+#world{
+    margin-left: 1.5vw;
+}
+
+#flecha3{
+    position: absolute;
+    top: 285%;
+    left: 50%;
+    color: #9c0000;
+    font-size: 2.5vw;
+    transition: .5s;
+}
+
+#flecha3:hover{
+    transition: .5s;
+    transform: scale(1.5);
+    color: white;
+}
+
+
+/* ACA EMPIEZA LA SECCION CUATERNARIA */
+
+.cuaternario{
+    width: 100%;
+    height: 100vh;
+    background-color: #1b1b1b;
+}
+
+.cuaternario h2{
+    font-size: 1.5vw;
+    font-family: 'seven', Arial, Helvetica, sans-serif;
+    position: absolute;
+    left: 50%;
+    top: 310vh;
+    color: white;
+    border-bottom: 2px solid #9c0000;
+    transform: translate(-50%, 0);
+}
+
+#imagen1{
+    width: auto;
+    height: 4vw;
+    padding-right: 13.5vw;
+    background-color: transparent;
+
+}
+
+#ult-img{
+    width: auto;
+    height: 4vw;
+    background-color: transparent;   
+}
+
+.contenedor-imagenes{
+    width: 65vw;
+    height: 7.5vw;
+    background-color: transparent;
+    position: absolute;
+    left: 50%;
+    top: 345vh;
+    transform: translate(-50%, 0);
+}
+
+h5{
+    position: absolute;
+    left: 50%;
+    top: 380vh;
+    transform: translate(-50%, 0);
+    font-family: 'seven', Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 2vh;
+    transition: .3s;
+}
+
+h5:hover{
+    color: #9c0000;
+    transition: .3s;
+}
+
+#flecha4{
+    position: absolute;
+    left: 50%;
+    top: 385vh;
+    transform: translate(-50%, 0);
+    color: white;
+    font-size: 2.2vh;
+    transition: .3s;
+}
+
+#flecha4:hover{
+    transition: .3s;
+    color: #9c0000
+}
+
+/* FOOTER */
+
+footer{
+    height: 13vh;
+    background-color: #2c2e2f;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+}
+
+footer ul li a i{
+    color: white;
+    font-size: 2vw;
+}
+
+footer ul{
+    background-color: transparent;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+
+
+}
+
+footer ul li{
+    display: inline-block;
+    margin-right: 7vw;
+    margin-top: 4.5vh;
+}
+
+.texto{
+    padding-left: 1vw;
+    color: white;
+    font-family: 'seven', Arial, Helvetica, sans-serif;
+    font-size: 1vw;
+    padding-bottom: 2vh;
+}
+
+
+
+
+/* MEDIA */
+
+@media screen and (max-width: 980px) {
+    header{
+        position: static;
+        height: 100vh;
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+    }
+
+    nav{
+        position: static;
+        height: 100vh;
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+    }
+
+    nav ul{
+        flex-direction: column;
+    }
+    
+    .inicio{
+        width: 100%;
+        height: 100vh;
+        background-color: #1b1b1b;
+    
+    }
+
+    .container{
+        top: 85%;
+      
+    }
+
+
+
+    #descargar{
+        top: 145%;
+        left: 50%;
+        display: block;
+    }
+    
+    #contactar{
+        top: 165%;
+        left: 50%;
+        display: block;
+    }
+    
+    #flecha{
+        position: absolute;
+        top: 185%;
+        left: 49.5%;
+        color: #9c0000;
+        font-size: 2.5vw;
+        transition: .5s;
+        
+    }
+
+
+
+    #graduado{
+        top: 113.5%;
+    }
+
+    .logo{
+        display: inline-block;
+        position: absolute;
+        color: #d1d1d1;
+        font-family: 'seven', Arial, Helvetica, sans-serif;
+        font-size: 4.6vh;
+        letter-spacing: 0.45vh;
+        top: 5%;
+        left: 50%;
+        transform: translate(-55%, -50%);
+        transition: .5s;
+        width: 250px;
+    }
+
+    nav li{
+        display: inline-block;
+        margin-right: 5vw;
+        padding-bottom: 13vh;    
+    }
+    
+    nav li a{
+        position: relative;
+        color: #d1d1d1;
+        font-size: 5vh;
+        font-family: 'seven', Arial, Helvetica, sans-serif;
+        letter-spacing: 0.18vw;
+        transition: 0.5s;
+    }
+
+    .container h1{
+        font-size: 4.33vw;
+        font-family: 'seven', Arial, Helvetica, sans-serif;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    .container h2{
+        font-size: 2.31vh;
+        left: 1%;
+    }
+
+    .container p{
+        left: 1%;
+    }
+
+    #graduado{
+        left: 21%;
+        top: 114%;
+    }
+}
+
+/* SWITCH*/
+
+.switch{
+    background: #343d5b;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+}
+
+.switch span{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: #ffffff;
+}
+
+.switch::after{
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: #f1f1f1;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    transition: .3s ease all;
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,.2);
+}
+
+.switch:active{
+    background: orange;
+    color: #0000;
+}
+
+.switch:active::after{
+    right: 0;
+    left: unset;
+}
+
+
+/* estilos alternativos */
+
+section.dark{
+    background-color: #ffffff;
+}
+h1.dark{
+    color: #1b1b1b;
+}
